@@ -24,4 +24,4 @@ jobs:
             run: npm install
 
           - name: Unit testing
-            run: npn test
+            run: npm test
