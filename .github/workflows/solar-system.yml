@@ -15,12 +15,12 @@ env:
 jobs:
     unit-testing: 
         name: Unit testing
-         strategy:
-             matrix:
-                 nodejs_version: [18, 19, 20]
+        strategy:
+            matrix:
+                nodejs_version: [18, 19, 20]
         #         operating_system: [ubuntu-latest, macos-latest]
-                 exclude:
-                     - nodejs_version: 18
+                exclude:
+                    - nodejs_version: 18
         #               operating_system: macos-latest
         runs-on: ubuntu-latest
         steps:
@@ -56,8 +56,8 @@ jobs:
     code-coverage: 
         name: Code Coverage
          strategy:
-             matrix:
-                 nodejs_version: [18, 20]
+            matrix:
+                nodejs_version: [18, 20]
         #         operating_system: [ubuntu-latest, macos-latest]
         #         exclude:
         #           - operating_system: macos-latest
