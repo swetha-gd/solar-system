@@ -40,7 +40,8 @@ jobs:
             run: npm test
 
           - name: Archite Test Result
-            if: failure() && (steps.nodejs-unit-testing-step.outcome == 'failure' || steps.nodejs-unit-testing-step.outcome == 'success' )
+            # if failure() && (steps.nodejs-unit-testing-step.outcome == 'failure' || steps.nodejs-unit-testing-step.outcome == 'success' )
+            if: always()
             uses: actions/upload-artifact@v7.0.1
             with:
               name: Mocha-Test_result
